@@ -1,0 +1,21 @@
+#container{
+    position: relative;
+    border: 1px solid #000;
+    display: flex;
+    width: 460px;
+    height: 400px;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+
+#container2{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 460px;
+    height: 200px;
+}
+
+img{
+    width: 100px;
+}
