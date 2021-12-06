@@ -1,0 +1,19 @@
+#meu-div-1{
+    position: relative;
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+}
+
+#meu-div-1 img {
+    width: 100px;
+    float: left;
+}
+
+#meu-div-1 ~ .borda-class{
+    border: 1px solid #000;
+}
+
+#meu-div-1 > div > img{
+    width: 200px;
+}
