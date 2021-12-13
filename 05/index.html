@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+
+
+        .fontGrande{
+            font-size: 25px;
+        }
+
+        .fontPequena{
+            font-size: 12px;
+        }
+
+        .corPrincipal{
+            color: green;
+        }
+
+        .corSecundaria{
+            color: blue;
+        }
+
+        .corSecundaria:hover{
+            font-size: 23px;
+        }
+
+        .caixaMedia{
+            width: 200px;
+            height: 200px;
+            background-color: #FEFEFE;
+        }
+
+        .retanguloMedia{
+            width: 400px;
+            height: 200px;
+            background-color: #FEFEFE;
+        }
+
+        .caixaMedia:hover{
+            background-color: #000;
+            display: none;
+        }
+
+        .linkPrincipal{
+            color: #FFF;
+            font-size: 20px;
+        }
+
+        .linkPrincipal:visited{
+            color:red;
+            
+        }
+
+        .destaqueTexto > p::before,
+        .destaqueTexto > p::after
+        {
+            content: '*';
+            color:blue;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+
+        .destaqueTexto > p::after{
+            margin-right: 0px;
+            margin-left: 20px;
+
+        }
+
+        .destaqueTexto > p::selection{
+            background-color: black;
+            color:white;
+        }
+
+        li::marker {
+
+            color:red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            Texto sem formatação
+        </div>
+        <div class="fontGrande corPrincipal caixaMedia">
+            Texto de teste
+
+            <p class="corSecundaria fontPequena">
+                Outro texto
+            </p>
+        </div>
+
+        <a href="http://www.google.com" target="_blank" class="linkPrincipal">Esse link é do Google</a>
+        <a href="/teste.html" target="_blank" class="linkPrincipal">Esse link é da Pagina Teste</a>
+
+
+        <div class="retanguloMedia fontGrande destaqueTexto">
+            <p>Testando Pseudo Elemento</p>
+            <p>Testando Pseudo Elemento 2</p>
+
+            <ul>
+                <li>
+                    Item 1
+                </li>
+                <li>
+                    Item 2
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
