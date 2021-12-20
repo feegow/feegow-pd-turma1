@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMULARIO 1</h1>
+    <form action="index.html" method="GET" id="formCadastroPrincipal">
+        <div>
+            Nome<br/>
+            <input disabled name="nomeUsuario" type="text" value="Wesdras"/>
+        </div>
+        <div>
+            Termos<br/>
+            <input readonly name="termos" type="text" value="Essas são as regras da tela"/>
+        </div>
+
+        <div>
+            Senha<br/>
+
+            <input placeholder="Digite sua senha" maxlength="10" required name="senhaUsuario" type="password" />
+        </div>
+        <div>
+            Pessoa Fisica
+            <input name="tipoPessoa" type="radio" value="PF" />
+            <br/>
+            Pessoa Juridica
+            <input name="tipoPessoa" type="radio" value="PJ" />
+            <br/>
+        </div>
+
+        <div>
+            <p>Endereços</p>
+            Endeço Comercial
+            <input name="tipoEndereco" required type="radio" value="C" />
+            <br/>
+            Endeço Residencial
+            <input name="tipoEndereco" required type="radio" value="R" />
+            <br/>
+
+        </div>
+
+        <input type="submit" value="Salvar" />
+    </form>
+
+    <h1>FORMULARIO 2</h1>
+    <form action="index.html" method="GET">
+        <div>
+            Pessoa Fisica
+            <input name="tipoPessoa" type="radio" value="PF" />
+            <br/>
+            Pessoa Juridica
+            <input name="tipoPessoa" type="radio" value="PJ" />
+            <br/>
+        </div>
+        <div>
+            É cliente?<br/>
+            <input type="checkbox" disabled name="eCliente" style="width: 50px;height: 50px;" />
+        </div>
+       
+        <input type="email" placeholder="Digite seu email aqui" name="emailUsuario" />
+        <br/>
+        Cor<br/>
+        <input type="color" name="corSite" />
+
+        <br/>
+        Data<br/>
+        <input type="date" name="dataNascimento" />
+
+        <br/>
+        Arquivo<br/>
+        <input type="file" name="arquivo" /><br/>
+        
+        <textarea name="termos" cols="30" rows="2">
+Termos do contrato aqui
+Leia com cuidado
+        </textarea>
+        
+        <input type="submit" value="Salvar" />
+        
+        <button disabled>Enviar</button>
+    </form>
+
+    <!-- 
+        Esse é um formulario de cadastro
+    -->
+
+    <input type="submit" value="Salvar" form="formCadastroPrincipal"  />
+    <!-- <input type="button" value="Buscar" onclick="alert('Ola')"  /> -->
+    <br/>
+</body>
+</html>
