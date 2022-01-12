@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1{
+            color:blue;
+        }
+
+        .paragrafo{
+            color:red
+        }
+
+        p{
+            font-size: 30px;
+        }
+
+        #primeiraTabela > tr > td{
+            color:red;
+        }
+
+        #primeiroDIV > p {
+            color:red
+        }
+
+        #primeiraTabela:hover{
+            color:green
+        }
+
+        li::marker{
+            color:red;
+        }
+
+        p::before{
+            content: 'X';
+            font-size: 10px;
+            color:gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="primeiroDIV">
+        <div>
+            <p>Paragrafo interno</p>    
+            teste
+        </div>
+        <p>paragrafo teste</p>
+    </div>
+    <p id="p1">Paragrafor 1</p>
+    <p class="paragrafo">Paragrafo 2</p>
+    <p class="paragrafo">Paragrafo 3</p>
+    <table id="primeiraTabela" border="1">
+        <tr>
+            <th class="importante">
+                Nome
+            </th>
+            <th>
+                Profissão
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Wesdras
+            </td>
+            <td>
+                Programador
+            </td>
+        </tr>
+    </table>
+
+
+    <table id="segundaTabela" border="1">
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Profissão
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Wesdras
+            </td>
+            <td>
+                Programador
+            </td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>
+            Primeiro item
+        </li>
+        <li>
+            Segundo item
+        </li>
+    </ul>
+
+</body>
+</html>
