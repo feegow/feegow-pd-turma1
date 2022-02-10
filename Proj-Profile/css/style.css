@@ -1,0 +1,307 @@
+body{
+    background-color: #FFF;
+    color:#000;
+}
+.content{
+    width: 90%;
+    margin:0 auto;
+    text-align: center;
+    max-width: 1080px;
+}
+
+h1,
+h1 a
+{
+    color: #F7A538;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+h3{
+    color: #F7A538;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.foto-perfil{
+    width: 92%;
+    margin:0 auto;
+    border-radius: 100%;
+    border:7px solid #FFF;
+}
+
+nav{
+    margin-bottom: 30px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    margin:0px;
+    padding: 0px;
+}
+
+nav ul li{
+    list-style: none;
+    width: 100px;
+    text-transform: uppercase;
+
+}
+
+ul li a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color:#F7A538;
+}
+
+ul li a:hover{
+    color: #000;
+}
+
+main{
+    text-align: center;
+}
+
+#profile-bg{
+    background: #F7A538;
+    border-radius: 100%;
+    width: 80%;
+    padding: 9px 3px 6px 3px;
+    margin: 0 auto;
+    max-width: 332px;
+
+}
+
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.img-redes-sociais{
+    width: 100px;
+}
+
+.area-redes-sociais{
+    margin:40px;
+}
+
+.area-redes-sociais-texto{
+    margin:25px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes efeitoRedesSociais {
+    0%{
+        width: 0px;
+        transform:rotate(0deg)
+    }
+    25%{
+        width: 80px;
+    }
+    50%{
+        width:20px;
+        transform:rotate(90deg)
+    }
+    75%{
+        width:60px;
+    }
+    100%{
+        width:40px;
+        transform:rotate(180deg)
+    }
+}
+
+footer img{
+    float:left;
+    animation: efeitoRedesSociais 5s infinite;
+    animation-direction: alternate;
+}
+
+footer > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+footer > div > div{
+    width: 200px;
+    display: flex;
+    align-items: center;
+
+}
+
+footer > div > div > a{
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+
+@keyframes mostrarPaleta {
+    from {
+        margin-left:-60px;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+    to{
+        margin-left:50px;
+        opacity: 1;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+.paletaCor
+{
+    margin-left:-60px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    animation-name: mostrarPaleta;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.primeiraCorBase
+{
+    background-color: blue;
+}
+
+.segundaCorBase
+{
+    background-color: brown;
+    margin-top:50px;
+}
+
+.primeiraCorBase:hover,
+.segundaCorBase:hover{
+    cursor: no-drop;
+}
+
+.primeiraCorBase:hover ~ header > h1,
+.primeiraCorBase:hover ~ header  a,
+.primeiraCorBase:hover ~ main > h3,
+.primeiraCorBase:hover ~ footer > h3{
+    color:blue;
+}
+
+.primeiraCorBase:hover ~ main > #profile-bg{
+    background-color:blue;
+}
+
+.segundaCorBase:hover ~ header > h1 ,
+.segundaCorBase:hover ~ header  a,
+.segundaCorBase:hover ~ main > h3,
+.segundaCorBase:hover ~ footer > h3{
+    color:brown;
+}
+
+.segundaCorBase:hover ~ main > #profile-bg{
+    background-color:brown;
+}
+
+.paletaCores{
+    position:fixed;
+}
+
+.livrosFavoritos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.livrosFavoritos2{
+    column-count: 4;
+    column-gap: 50px;
+}
+
+.livrosFavoritos2 div{
+    border:1px solid #000;
+}
+
+
+@keyframes mostrarLivros {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.livrosFavoritos > img{
+    border-radius: 20px;
+    height:300px ;
+    margin:3px;
+    opacity: 0;
+    transition: 3s transform, 3s border;
+    transition-timing-function: cubic-bezier(0, 1.1, 0.86, 0.41);
+    animation-name: mostrarLivros;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.livrosFavoritos > img:hover{
+    cursor: pointer;
+    border: 10px solid orange;
+    /* transform: skewX(10deg); */
+    transform: translate(5%, 5%) rotate(10deg) scale(1.5,1.5) skewX(10deg);
+    height: 280px;
+    
+}
+
+
+
+.tituloLivro{
+    transition: font-size  3s 2s;
+}
+
+.tituloLivro:hover{
+    font-size:50px;
+}
+
+@media screen and (max-width: 600px) {
+    .livrosFavoritos2{
+        column-count: 2;
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+
+@media screen and (orientation: portrait) {
+    .livrosFavoritos2{
+        column-count: 1;
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+@media print {
+    .livrosFavoritos{
+        display: none;
+    }
+}
+
+
+
+
+
+
